@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F3F3F3"
+    tools:context=".views.MainActivity" >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#A618FF"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:padding="5dp"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:text="Web Service Demo"/>
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:background="@drawable/lightborder">
+
+        <Spinner
+            android:id="@+id/spn_categories"
+            android:layout_width="250dp"
+            android:layout_height="40dp"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_get_receipe"
+        android:layout_width="150dp"
+        android:layout_margin="5dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAllCaps="false"
+        android:text="Get Recipes"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipeRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/recipe_holder"/>
+</LinearLayout>
